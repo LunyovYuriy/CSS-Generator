@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>CSS-Genarator</title>
+
+
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
+
+
+</head>
+<body>
+	<h1>CSS Generator</h1>
+	<nav class="menu clearfix">
+		<ul class="menu-ul clearfix">
+			<li><a id="bord" class="active">Border</a></li>
+			<li><a id="bord-rad">Border Radius</a></li>
+			<li><a id="box-shad">Box Shadow</a></li>
+			<li><a id="text-shad">Text Shadow</a></li>
+			<li><a id="outline">Outline</a></li>
+			<li><a id="transform">Transform</a></li>
+			<li><a id="transition">Transition</a></li>
+		</ul>
+	</nav>
+	
+	<section class="border-stand">
+		<label><span>Width:</span>
+			<input type="number" class="border-width" id="bWidth" value="0"> px
+		</label><br>
+		<label><span>Color:</span>
+			<input type="text" class="border-color" id="bColor" placeholder="HEX or RGBA">
+		</label><br>
+		<span>Style:</span>
+		<select name="border-style" id="bStyle">
+			<option value="solid" selected>Solid</option>
+			<option value="dotted">Dotted</option>
+			<option value="double">Double</option>
+			<option value="dashed">Dashed</option>
+			<option value="ridge">Ridge</option>
+			<option value="inset">Inset</option>
+			<option value="outset">Outset</option>
+			<option value="groove">Groove</option>
+		</select>
+	</section>
+
+	<section class="border-radius-stand hide">
+		<label> <span>Top-Left:</span>
+			<input type="number" id="topLeft" max="100" value="0"> px
+			<hr>
+		</label><br>
+		<label> <span>Top-Right:</span>
+			<input type="number" id="topRight" max="100" value="0"> px
+		</label><br>
+		<label> <span>Bottom-Right:</span>
+			<input type="number" id="bottomRight" max="100" value="0"> px
+		</label><br>
+		<label> <span>Bottom-Left:</span>
+			<input type="number" id="bottomLeft" max="100" value="0"> px
+		</label>
+	</section>
+
+	<section class="box-shadow-stand hide">
+		<!-- <h3>Box-Shadow</h3> -->
+		<span>Inset: </span>
+		<select name="inset" id="inset">
+			<option value="no" selected>No</option>
+			<option value="inset">Inset</option>
+		</select><br>
+		<label><span>Horizontal Length:</span>
+			<input type="number" id="box-hor-length" value="0"> px
+		</label><br>
+		<label><span>Vertical Length:</span>
+			<input type="number" id="box-vert-length" value="0"> px
+		</label><br>
+		<label><span>Blur-radius:</span>
+			<input type="number" id="box-blur-rad" value="0"> px
+		</label><br>
+		<label><span>Spread:</span>
+			<input type="number" id="spread" value="0"> px
+		</label><br>
+		<span>Color type:</span>
+		<select name="color-type" id="color-type">
+			<option value="RGBA" selected>RGBA</option>
+			<option value="HEX">HEX</option>
+		</select>
+		<div id="selectedRGBA" class="">
+			<label>R <input type="number" id="RGBA-r" value="0"></label>
+			<label>G <input type="number" id="RGBA-g" value="0"></label>
+			<label>B <input type="number" id="RGBA-b" value="0"></label>
+			<label>A <input type="number" id="RGBA-a" value="0"></label>
+		</div>
+		<div id="selectedHEX" class="hide">
+			<label><span>HEX Color:</span>
+				<input type="text" id="HEXColor">
+			</label>
+		</div>
+	</section>
+
+	<section class="text-shadow-stand hide">
+		<label> <span>Horizontal Length:</span>
+			<input type="number" id="text-hor-length" value="0"> px
+		</label><br>
+		<label> <span>Vertical Length:</span>
+			<input type="number" id="text-vert-length" value="0"> px
+		</label><br>
+		<label><span>Blur-radius:</span>
+			<input type="number" id="text-blur-rad" value="0"> px
+		</label><br>
+		<label><span>Shadow Color:</span>
+			<input type="text" id="text-shadow-color" placeholder="HEX or RGBA"> px
+		</label><br>
+	</section>
+
+	<section class="outline-stand hide">
+		<label> <span>Outline Thickness:</span>
+			<input type="number" id="outline-thickness" value="0"> px
+		</label><br>
+		<span>Outline:</span>
+		<select name="outline" id="outline-select">
+			<option value="dotted">Dotted</option>
+			<option value="dashed">Dashed</option>
+			<option value="solid">Solid</option>
+			<option value="groove">Groove</option>
+			<option value="ridge">Ridge</option>
+			<option value="inset">Inset</option>
+			<option value="outset">Outset</option>
+			<option value="double">Double</option>
+			<option value="auto">Auto</option>
+		</select><br>
+		<label> <span>Outline Color:</span>
+			<input type="text" id="outline-color" placeholder="HEX">
+		</label><br>
+		<label> <span>Outline Offset:</span>
+			<input type="number" id="outline-offset" value="0">
+		</label><br>
+	</section>
+
+	<section class="transform-stand hide">
+		<label> <span>Scale:</span>
+			<input type="number" id="transf-scale" value="0">
+		</label><br>
+		<label> <span>Rotate:</span>
+			<input type="number" id="transf-rotate" value="0"> deg
+		</label><br>
+		<label> <span>Skew:</span>
+			<input type="number" id="skew-x" value="0"> deg
+			<input type="number" id="skew-y" value="0"> deg
+		</label><br>
+
+		<div class="transform-example" id="transform-example">Watch Me</div>
+	</section>
+
+	<section class="transition-stand hide">
+		<span>Property:</span>
+		<select name="transition-property" id="transition-property">
+			<option value="all" selected>All</option>
+			<option value="background">Background</option>
+			<option value="color">Color</option>
+			<option value="height">Height</option>
+			<option value="width">Width</option>
+			<option value="border">Border</option>
+		</select><br>
+		<label><span>Duration:</span>
+			<input type="number" id="transition-duration"> s 
+		</label><br>
+		<span>Function:</span>
+		<select name="transition-function" id="transition-function">
+			<option value="ease" selected>Ease</option>
+			<option value="linear">Linear</option>
+			<option value="ease-in">Ease-In</option>
+			<option value="ease-out">Ease-Out</option>
+			<option value="ease-in-out">Ease-In-Out</option>
+		</select><br>
+		<div class="transition-example" id="transition-example">Hover Me</div>
+	</section>
+
+
+	<script src="js/script.js"></script>
+	
+</body>
+</html>

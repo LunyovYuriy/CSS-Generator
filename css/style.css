@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center-block {
+  max-width: 645px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.menu {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  position: relative;
+  left: -50%;
+  float: right;
+  width: auto;
+}
+
+.menu li {
+  float: left;
+  list-style: none;
+  margin-left: 5px;
+  position: relative;
+  left: 50%;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  background: #62AAC1;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.menu li a:hover {
+  background: #3989A3;
+}
+
+.menu li a.active {
+  background: #3989A3;
+}
+
+.code-block {
+  border: 1px solid gray;
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+section {
+  background: lightgray;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+section span {
+  display: inline-block;
+  width: 100px;
+}
+
+section input {
+  width: 100px;
+  margin-bottom: 5px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section select {
+  width: 100px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+section h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  background: #62AAC1;
+  color: #fff;
+  padding: 10px;
+}
+
+.border-stand span {
+  width: 70px;
+}
+
+.box-shadow-stand span, .text-shadow-stand span, .outline-stand span {
+  width: 130px;
+}
+
+.transform-stand, .transition-stand {
+  position: relative;
+}
+
+.transform-stand span, .transition-stand span {
+  width: 70px;
+}
+
+.transform-stand input, .transition-stand input {
+  width: 50px;
+}
+
+.transform-example, .transition-example {
+  width: 100px;
+  height: 25px;
+  line-height: 25px;
+  padding: 20px;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.transition-example:hover {
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  background: #000;
+  color: #fff;
+  border: 3px dashed #fff;
+}
+
+@media screen and (max-width: 715px) {
+  .menu ul li {
+    text-align: center;
+    width: 150px;
+    margin-left: 0;
+  }
+  .menu ul li a {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
